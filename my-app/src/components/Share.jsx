@@ -12,12 +12,6 @@ import photo8 from '../img/share/photo8.jpg'
 import photo9 from '../img/share/photo9.jpg'
 
 
-const mouseMove = (event) => {
-  // console.log( event.clientX * (window.screen.availWidth / 100));
-  console.log( event.clientX);
-  
-}
-
 const Share = () => {
   return (
     <div className="Share">
@@ -25,7 +19,7 @@ const Share = () => {
         <p>Share your setup with</p>
         <h1>#FuniroFurniture</h1>
       </div>
-      <div className="carusel" onMouseMove={mouseMove}>
+      <div className="carusel">
         <img className="photo1" src={photo1} alt="" />
         <img className="photo2" src={photo2} alt="" />
         <img className="photo3" src={photo3} alt="" />

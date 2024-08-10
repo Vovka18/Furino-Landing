@@ -1,0 +1,146 @@
+@import './config/mixins&variables'
+
+    
+.Inspirations
+    width: 100%
+    background: #FCF8F3
+    @include flex-between-center
+    padding: 44px 0px 44px 110px
+    .text-block
+        width: 378px
+        height: 225px
+        @include flex-column-between
+        h1
+            @include headline
+        p
+            @include subtext
+        button
+            width: 176px
+            height: 48px
+            background: #E89F71
+            @include button-text
+            color: white
+            border: 0px
+            transition: .3s
+        button:hover
+            background: #F7DECD
+            color: #E89F71
+            
+            
+            
+    .slider
+        width: 65%
+        height: 670px
+        position: relative
+        .slider-menu
+            width: 100%
+            height: 100%
+            // padding: 50px
+            position: absolute
+            z-index: 3
+            top: 0px
+            left: 0px
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            justify-content: space-between
+
+            .controls
+                width: 100%
+                height: 50%
+                display: flex
+                justify-content: space-between
+                align-items: flex-end
+                padding: 50px
+                .prev, .next
+                    width: 48px
+                    height: 48px
+                    background: #E89F71
+                    border-radius: 50%
+                    @include flex-center
+                    transition: .3s
+                .prev:hover
+                    background: #F6DDCC
+                    svg path
+                        stroke: #E89F71
+                .next:hover
+                    background: #F6DDCC
+                    svg path
+                        stroke:  #E89F71
+            
+            .indicators
+                width: 50%
+                height: 200px
+                background: #FCF8F3
+                display: flex
+                align-items: center
+                gap: 30px
+                margin-bottom: 50px
+
+                .indicator, .swiper-pagination-bullet
+                    width: 11px
+                    height: 11px
+                    transition: .3s
+                    border-radius: 50%
+                    @include flex-center
+                    
+                    .dot
+                        width: 11px
+                        height: 11px
+                        background: #D8D8D8
+                        border-radius: 50%
+                        transition: .3s
+                .active, .swiper-pagination-bullet-active
+                    width: 27px
+                    height: 27px
+                    border: 3px solid $color-peach
+                    .dot
+                        background: $color-peach
+
+
+        .swiper 
+            .swiper-slide
+                .slideInSlider
+                    height: 582px
+                    img
+                        width: 404px
+                        height: 100%
+                        position: relative
+                        z-index: 1
+                        object-fit: cover
+                        user-select: none
+                        
+                    .slide-info
+                        width: 265px
+                        height: 130px
+                        display: flex
+                        align-items: flex-end
+                        position: absolute
+                        z-index: 2
+                        top: 428px
+                        left: 24px
+                        .text-block
+                            width: 217px
+                            height: 130px
+                            backdrop-filter: blur(3px)
+                            background: rgba(255, 255, 255, 0.72)  
+                            padding: 32px
+                            p
+                                width: 135px
+                                @include flex-between-center
+                                
+                                @include subtext
+                                .line
+                                    width: 27px
+                                    height: 1px
+                                    background: #616161
+                            h1
+                                font-size: 28px
+                                font-weight: 600
+                        .arrow
+                            width: 48px
+                            height: 48px
+                            background: $color-peach
+                            @include flex-center
+                            
+    

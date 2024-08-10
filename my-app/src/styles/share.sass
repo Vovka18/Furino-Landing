@@ -1,0 +1,53 @@
+@import './config/mixins&variables'
+
+.Share
+    width: 100%
+    @include flex-column-between
+    margin-top: 100px
+        overflow-x: visible
+    .block-text
+        width: 100%
+        height: 86px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        
+        p
+            @include subtext
+        h1
+            @include headline
+            
+    .carusel
+        min-width: 1800px
+        height: 721px
+        display: grid
+        grid-template-columns: 274px 91px 344px 295px 178px 96px 146px 263px
+        grid-template-rows: 54px 13px 41px 226px 49px 85px 76px 3px 30px 1px
+        grid-column-gap: 16px
+        grid-row-gap: 16px
+        overflow-x: visible
+        transform: translateX(-120px)
+
+        img
+            user-select: none
+        .photo1 
+            grid-area: 1 / 1 / 5 / 2
+        .photo2 
+            grid-area: 5 / 1 / 10 / 3
+        .photo3 
+            grid-area: 2 / 2 / 5 / 4
+        .photo4 
+            grid-area: 5 / 3 / 8 / 4
+        .photo5 
+            grid-area: 4 / 4 / 7 / 5
+        .photo6 
+            grid-area: 3 / 5 / 6 / 7
+        .photo7 
+            grid-area: 6 / 5 / 10 / 6
+        .photo8 
+            grid-area: 1 / 7 / 6 / 9
+        .photo9 
+            grid-area: 6 / 6 / 8 / 8
+            
+        

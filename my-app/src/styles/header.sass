@@ -1,0 +1,192 @@
+@import './config/mixins&variables'
+    
+header
+    width: 100%
+    // height: 774px
+    background: linear-gradient(90deg, $background-beige 66.94%, #fcf8f3 66.94%)
+    padding: 40px 100px 0px 100px
+    @include flex-column-between
+    align-items: center
+    // overflow: hidden
+
+    nav
+        // width: 100%
+        width: 1200px
+        height: 45px
+        @include flex-between-center
+
+        .user-navigation
+            width: 967px
+            height: 100%
+            @include flex-between-center
+            position: relative
+            ul
+                @include flex-between-center
+                li
+                    list-style-type: none
+                    margin-left: 40px
+                    font-weight: 500
+                    transition: .3s
+                    user-select: none
+                    position: relative
+                svg
+                    margin-left: 12px
+                    transition: 0.3s
+                    path
+                        transition: 0.3s
+
+                .sub-menu-products, .sub-menu-rooms
+                    width: 200px
+                    background: #e89f71
+                    padding: 15px 0px
+                    display: flex
+                    flex-direction: column
+                    z-index: 3
+                    position: absolute
+                    top: 20px
+                    left: 0px
+                    transform: translateY(10px)
+                    opacity: 0
+                    transition: .3s
+                    visibility: hidden
+                    li
+                        margin-bottom: 5px
+                        width: 100%
+                        a
+                            color: white
+                            list-style-type: none
+                            text-decoration: none
+                            font-size: 16px
+                            font-weight: 500
+                            line-height: 1
+                        a:hover
+                            text-decoration: underline
+
+                li:hover
+                    color: #E89F71
+                    svg
+                        transform: rotate(-180deg)
+                        path
+                            stroke: #E89F71
+                    .sub-menu-products, .sub-menu-rooms
+                        visibility: visible
+                        transition: .3s
+                        opacity: 1
+                        transform: translateY(0px)
+
+            .input
+                mix-width: 473px
+                height: 100%
+                background: white
+                display: flex
+                @include flex-between-center
+                button
+                    width: 44px
+                    height: 45px
+                    background: white
+                    border: 0px
+                img
+                    width: 20px
+                    height: 20px
+                input
+                    width: 429px
+                    max-width: 429px
+                    height: 100%
+                    border: 0px
+                    outline: 0px
+                input::placeholder
+                    font-weight: 400
+                    color: #616161
+
+        .user-panel
+            width: 152px
+            height: 40px
+            @include flex-between-center
+
+            svg
+                transition: .3s
+                *
+                    transition: .3s
+            svg:hover path, svg:hover circle
+                stroke: #E89F71
+
+            .avatar
+                width: 40px
+                height: 40px
+                img
+                    width: 100%
+
+    .header-content
+        // width: 100%
+        width: 1200px
+        height: 623px
+        position: relative
+
+        .slider
+            width: 100%
+            height: 100%
+            z-index: 1      
+            display: flex
+            align-items: flex-end  
+            justify-content: flex-end
+            
+            
+        .info-block
+            width: 494px
+            height: 533px
+            padding: 60px
+            background: white
+            @include flex-column-between
+            z-index: 2
+            position: absolute
+            top: 10px
+            left: 0px
+            // display: none ////////////
+            h1
+                font-weight: 700
+                font-size: 56px
+            p
+                font-weight: 500
+                font-size: 20px
+                color: #898989
+            button
+                width: 100%
+                height: 78px
+                font-weight: 600
+                font-size: 20px
+                background: $color-peach
+                border: 0px
+                color: white
+                transition: .3s
+            button:hover
+                background: #F7DECD
+                color: #E89F71
+
+
+// @media screen and (max-width: 1250px) 
+//     header
+//         width: 100%
+//         nav
+//             width: 100%
+//             .user-navigation
+//                 .input
+//                     *
+//                         display: none
+//         .header-content
+//             .info-block
+//                 left: 200px
+
+// @media screen and (max-width: 1024px)
+//     header
+//         .header-content
+//             min-height: 1000px
+//             @include flex-column-between
+//             flex-direction: column-reverse
+//             .slider
+//                 position: static
+//             .info-block
+//                 width: 200px
+//                 padding: 40px
+//                 position: static
+//                 background: lime
+    

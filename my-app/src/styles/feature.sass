@@ -1,0 +1,30 @@
+@import './config/mixins&variables'
+
+.feature
+    width: 100%
+    padding: 88px 100px
+    @include flex-between-center
+    flex-wrap: wrap
+
+    .feature-block
+        width: 280px
+        height: 85px
+        display: flex
+        .icon
+            width: 86px
+            height: 100%
+            @include flex-center
+        .text-info
+            width: 194px
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: space-between
+            justify-content: center
+            h2
+                font-size: 18px
+                font-weight: 600
+            p
+                font-size: 16px
+                font-weight: 500
+                color: #898989

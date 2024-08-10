@@ -1,0 +1,147 @@
+@import './config/mixins&variables'
+
+.OurProducts
+    width: 100%
+    padding: 88px 100px 44px 100px
+    @include flex-column-between
+    align-items: center
+
+    h1
+        @include headline
+
+    .products
+        width: 100%
+        @include flex-between-center
+        flex-wrap: wrap
+
+        .product
+            width: 285px
+            height: 446px
+            display: flex
+            flex-direction: column
+            position: relative
+            margin-top: 32px
+
+            .image-block
+                width: 100%
+                height: 301px
+                img
+                    width: 100%
+                    position: relative
+                    z-index: 1
+                div
+                    width: 48px
+                    height: 48px
+                    border-radius: 50%
+                    position: absolute
+                    z-index: 2
+                    top: 24px
+                    left: 212px
+                    @include flex-center
+                    @include subtext(white)
+                    
+                    
+                .sale
+                    background: #E97171
+                .new
+                    background: #2EC1AC
+
+            .product-info
+                width: 100%
+                height: 145px
+                background: #F4F5F7
+                padding: 16px 31px 30px 16px
+                @include flex-column-between
+
+                h2
+                    @include headline2
+                p
+                    @include subtext
+                .price
+                    width: 100%
+                    @include flex-between-center
+                    h2
+                        font-size: 20px
+                        font-weight: 600
+                    p
+                        @include subtext(#B0B0B0)
+                        text-decoration: line-through
+
+            .wrapper
+                width: 100%
+                height: 100%
+                position: absolute
+                background: rgb(58, 58, 58, .72)
+                top: 0px
+                left: 0px
+                @include flex-center
+                flex-direction: column
+                padding: 0px 41px
+                opacity: 0
+                transition: .4s
+                z-index: 3
+
+                button
+                    width: 100%
+                    @include button-text
+                    color: $color-peach
+                    background: white 
+                    transition: .3s
+                    border: 0px
+                    
+                button:hover
+                    background: #F7DECD
+                .link
+                    width: 100%
+                    height: 24px
+                    margin-top: 24px
+                    @include flex-between-center
+                    
+                    div
+                        width: 50%
+                        @include flex-center
+
+                        p
+                            margin-left: 8px
+                            @include subtext(white, 600)
+                            transition: .2s
+                            user-select: none
+                        svg
+                            fill: rgba(255, 255, 255, 0)
+                            transition: .2s
+                        svg path
+                            transition: .2s
+                    div:hover
+                        p
+                            color: $color-peach
+                        svg path
+                            fill: $color-peach
+                            stroke: $color-peach
+                                                  
+            .wrapper:hover
+                opacity: 1
+                        
+    button
+        width: 245px
+        height: 48px
+        background: white
+        border: 1px solid $color-peach
+        color: $color-peach
+        margin-top: 32px
+        @include button-text
+        transition: .3s
+    button:hover
+        background: #F7DECD
+
+
+@media screen and (max-width: 1024px) 
+    .OurProducts
+        padding: 88px 10px 44px 10px
+        .products
+            gap: 30px
+
+@media screen and (max-width: 1024px) 
+    .OurProducts
+        .products
+            justify-content: center
+

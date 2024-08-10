@@ -1,0 +1,36 @@
+$background-beige: #f9f1e7
+// $text-color: #3A3A3A
+$color-peach: #E89F71
+$subtext-color: #898989
+
+
+//text
+@mixin headline
+    font-size: 40px
+    font-weight: 700
+@mixin headline2
+    font-size: 24px
+    font-weight: 600
+@mixin subtext($color: $subtext-color, $font-weight: 500)
+    font-size: 16px
+    font-weight: $font-weight
+    color: $color
+@mixin button-text($font-size: 16, $font-weight: 600)
+    font-size: $font-size
+    font-weight: $font-weight
+    
+
+// flex
+@mixin flex-between-center
+    display: flex
+    justify-content: space-between
+    align-items: center
+@mixin flex-column-between
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+@mixin flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+
